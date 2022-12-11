@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Snakes_and_Ladders.MainPage">
+
+    <StackLayout>
+        <Label x:Name="LblStatus" Text="" />
+        <Grid x:Name="GridGameTable" BackgroundColor="Blue"
+          HorizontalOptions="Center" VerticalOptions="Center"
+          HeightRequest="960" WidthRequest="960">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="board.png" Grid.Row="1" Grid.Column="1"
+               Grid.RowSpan="10" Grid.ColumnSpan="10" Aspect="Fill" />
+
+            <!-- Player Piece -->
+            <BoxView x:Name="BVPlayerPiece1" Color="DeepPink" 
+                 Grid.Row="11" Grid.Column="1"
+                 HeightRequest="60" WidthRequest="60" CornerRadius="30"
+                 HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <BoxView x:Name="BVPlayerPiece2" Color="LightGreen" 
+                 Grid.Row="11" Grid.Column="2"
+                 HeightRequest="60" WidthRequest="60" CornerRadius="30"
+                 HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <BoxView x:Name="BVPlayerPiece3" Color="LightCoral" 
+                 Grid.Row="11" Grid.Column="3"
+                 HeightRequest="60" WidthRequest="60" CornerRadius="30"
+                 HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <!-- Buttons -->
+            <Button x:Name="BtnDice" Text="Roll"
+                Grid.Row="11" Grid.Column="10"
+                HorizontalOptions="Center" VerticalOptions="Center"
+                Clicked="BtnDice_Clicked" />
+
+            <Button x:Name="BtnSave" Text="Save"
+                Grid.Row="11" Grid.Column="7"
+                HorizontalOptions="Center" VerticalOptions="Center"
+                Clicked="BtnSave_Clicked" />
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
